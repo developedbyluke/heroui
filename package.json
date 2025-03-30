@@ -49,7 +49,8 @@
     "release": "changeset publish",
     "version:canary": "changeset version --snapshot canary",
     "release:canary": "changeset publish --snapshot --no-git-tag --tag canary",
-    "postinstall": "husky install && pnpm --filter @heroui/theme build"
+    "postinstall": "husky install && pnpm --filter @heroui/theme build",
+    "prepare": "pnpm build"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",
