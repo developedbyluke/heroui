@@ -207,6 +207,12 @@ export function useAutocomplete<T extends object>(originalProps: UseAutocomplete
         onClose?.();
       }
     },
+    onSelectionChange: (key) => {
+      originalProps.onSelectionChange?.(key);
+      if (key != null) {
+        state.close();
+      }
+    },
   });
 
   state = {
